@@ -184,6 +184,10 @@
         #}}}2
       };
       formatter = lib.perSystem (pkgs: pkgs.nixfmt-rfc-style);
+      templates.default = {
+        path = ./template;
+        description = "A simple Rust flake with cross-compilation support";
+      };
     };
   #}}}1
 }
