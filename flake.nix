@@ -184,34 +184,6 @@
         #}}}2
       };
       formatter = lib.perSystem (pkgs: pkgs.nixfmt-rfc-style);
-      packages = lib.perSystem (
-        pkgs:
-        let
-          mkPackage =
-            features:
-            let
-              f =
-                target:
-                lib.tagTrace' "crossCompile' return value" (
-                  lib.crossCompile' {
-                    src = ./.;
-                    inherit pkgs target;
-                    attrs.FOKDIR = ./foks;
-                    attrs.cargoBuildFlags = lib.tagTrace "cargoBuildFlags" (
-                      pkgs.lib.concatMap (feature: [
-                        "--feature"
-                        "fia/${feature}"
-                      ]) features
-                    );
-                  }
-                );
-            in
-            f null // { cross = lib.tagTrace' "cross" (pkgs.lib.mapAttrs f lib.buildTargets); };
-        in
-        (lib.tagTrace' "mkPackageSet return value" (
-          (lib.tagTrace "mkPackageSet" lib.mkPackageSet) mkPackage
-        ))
-      );
     };
   #}}}1
 }
