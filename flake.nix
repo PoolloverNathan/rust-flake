@@ -56,8 +56,8 @@
           let
             toolchainData = {
               channel = "nightly";
-              date = "2024-09-23";
-              sha256 = "sha256:Dr3Ze+40mXcpM7RpYPU76+AFWLeI/ccW6F+TyZLERbg=";
+              date = "2025-10-28";
+              sha256 = "sha256-EIWZ8wNGPKuu87U6teDA5WCmpal/YG11qALvtZUUG68=";
             };
             fenixPkgs = fenix.packages.${system};
             hostToolchain = fenixPkgs.toolchainOf toolchainData;
