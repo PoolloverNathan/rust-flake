@@ -109,11 +109,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1732981884,
-        "narHash": "sha256-FEGGNWHiRkowgFfm1GpjasJ07O0YNQoJkcgAT64rH8Y=",
+        "lastModified": 1767470102,
+        "narHash": "sha256-ql+h7dg4y8BUM1hMccqdAn8mjonWaRQWG13nDCuY4v4=",
         "owner": "poollovernathan",
         "repo": "rust-flake",
-        "rev": "a43f3397ac5d104bca6273d0acda73afef76e8ce",
+        "rev": "d1b3f45657ff67297812c412a79f328c5724d0f6",
         "type": "github"
       },
       "original": {
